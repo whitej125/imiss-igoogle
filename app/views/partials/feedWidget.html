@@ -2,12 +2,15 @@
   <div class="col-xs-12">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <div class="panel-title">{{feed.title}}</div>
+        <div class="panel-title"><a href="{{feed.link}}">{{feed.title}}</a></div>
       </div>
       <div class="panel-body">
-        <ul>
+        <!-- <ul>
           <li ng-repeat="entry in feed.entries"><a href="{{entry.link}}">{{entry.title}}</a></li>
-        </ul>
+        </ul> -->
+        <p ng-repeat="entry in feed.entries">
+          <a href="{{entry.link}}">{{entry.title}}</a>
+        </p>
       </div>
     </div>
   </div>
