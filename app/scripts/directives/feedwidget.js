@@ -9,7 +9,7 @@
 angular.module('homepageApp')
   .directive('feedWidget', ['feedFactory', function (feedFactory) {
     return {
-      templateUrl: 'views/partials/feedWidget.html',
+      templateUrl: 'views/feedWidget.html',
       restrict: 'E',
       link: function(scope, element, attrs) {
         feedFactory.loadFeed(attrs.url, attrs.num, function(error, data) {
